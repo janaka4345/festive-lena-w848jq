@@ -1,11 +1,23 @@
+"use client";
 export default function Home() {
+  const handleFormdara = (e) => {
+    e.preventDefault();
+    const formdata = new FormData(e.target);
+    const payload = Object.fromEntries(formdata);
+    // console.log(formdata.get("car"));
+    console.log(payload);
+  };
   return (
     <>
-      <div className="flex gap-4  bg-gray-200 flex-row w-[750px] mx-auto rounded-lg border border-gray-200  text-gray-950 shadow-sm dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
+      <form
+        onSubmit={handleFormdara}
+        className="flex gap-4  bg-gray-200 flex-row w-[750px] mx-auto rounded-lg border border-gray-200  text-gray-950 shadow-sm dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50"
+      >
         <div className="border-2 w-1/2">
           <h1 className="text-xl font-semibold leading-none tracking-tight">
             Choose amount thats right for you
           </h1>
+
           <input
             placeholder="First Name"
             className="flex h-10 w-full rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500  disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300"
@@ -35,13 +47,7 @@ export default function Home() {
             name="cardNumber"
             id=""
           />
-          <input
-            placeholder="First Name"
-            className="flex h-10 w-full rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500  disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300"
-            type="text"
-            name="cardNumber"
-            id=""
-          />
+
           <button
             className="inline-flex items-center justify-center whitespace-nowrap rounded-sm text-sm font-medium ring-offset-white transition-colors  disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-gray-950 dark:focus-visible:ring-gray-300 bg-gray-900 text-gray-50 hover:bg-gray-900/90 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 h-10 px-4 py-2 w-full"
             type="submit"
@@ -58,6 +64,7 @@ export default function Home() {
                 type="radio"
                 name="200gb"
                 id="200gb"
+                value="200gb"
               />
               <p>
                 <span>200 GB</span> of storage
@@ -72,6 +79,7 @@ export default function Home() {
                 type="radio"
                 name="200gb"
                 id="1gb"
+                value="1gb"
               />
               <p>
                 <span>1 GB</span> of storage
@@ -79,7 +87,7 @@ export default function Home() {
             </div>
           </label>
         </div>
-      </div>
+      </form>
     </>
   );
 }
