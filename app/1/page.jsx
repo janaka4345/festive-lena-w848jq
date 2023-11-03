@@ -50,12 +50,31 @@ export default function Home() {
           </button>
         </div>
         <div className="border-2 w-1/2">
-          <input className="hidden" type="checkbox" name="200gb" id="200gb" />
           <label htmlFor="200gb">
             <div className="bg-white border-2 w-full h-fit rounded-sm ">
               <h1 className="">Essential</h1>
+              <input
+                className="bg-red-500 "
+                type="radio"
+                name="200gb"
+                id="200gb"
+              />
               <p>
                 <span>200 GB</span> of storage
+              </p>
+            </div>
+          </label>
+          <label htmlFor="1gb">
+            <div className="bg-white border-2 w-full h-fit rounded-sm ">
+              <h1 className="">Essential</h1>
+              <input
+                className="bg-red-500 "
+                type="radio"
+                name="200gb"
+                id="1gb"
+              />
+              <p>
+                <span>1 GB</span> of storage
               </p>
             </div>
           </label>
