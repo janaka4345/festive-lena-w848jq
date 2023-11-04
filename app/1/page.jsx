@@ -23,30 +23,30 @@ export default function Home() {
           </h1>
 
           <input
-            placeholder="First Name"
             className="flex h-10 w-full rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500  disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300"
+            placeholder="First Name"
             type="text"
             name="firstName"
             id="firstName"
           />
 
           <input
-            placeholder="Email"
             className="flex h-10 w-full rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500  disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300"
+            placeholder="Email"
             type="email"
             name="email"
             id="email"
           />
           <input
-            placeholder="Password"
             className="flex h-10 w-full rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500  disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300"
+            placeholder="Password"
             type="password"
             name="password"
             id="password"
           />
           <input
-            placeholder="Card Number"
             className="flex h-10 w-full rounded-sm border border-gray-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500  disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:ring-offset-gray-950 dark:placeholder:text-gray-400 dark:focus-visible:ring-gray-300"
+            placeholder="Card Number"
             type="text"
             name="cardNumber"
             id=""
