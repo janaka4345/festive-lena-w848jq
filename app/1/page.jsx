@@ -1,5 +1,9 @@
 "use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [formState, setFormState] = useState("200gb");
   const handleFormdara = (e) => {
     e.preventDefault();
     const formdata = new FormData(e.target);
@@ -58,13 +62,16 @@ export default function Home() {
         <div className="border-2 w-1/2">
           <label htmlFor="200gb">
             <div className="bg-white border-2 w-full h-fit rounded-sm ">
-              <h1 className="">Essential</h1>
+              <h1 className="">
+                Essential {"200gb" === formState && <span>x</span>}
+              </h1>
               <input
-                className="bg-red-500 "
+                className="bg-red-500 hidden"
                 type="radio"
                 name="200gb"
                 id="200gb"
                 value="200gb"
+                onChange={() => setFormState("200gb")}
               />
               <p>
                 <span>200 GB</span> of storage
@@ -73,13 +80,14 @@ export default function Home() {
           </label>
           <label htmlFor="1gb">
             <div className="bg-white border-2 w-full h-fit rounded-sm ">
-              <h1 className="">Essential</h1>
+              <h1 className="">Pro {"1gb" === formState && <span>x</span>}</h1>
               <input
-                className="bg-red-500 "
+                className="bg-red-500 hidden "
                 type="radio"
                 name="200gb"
                 id="1gb"
                 value="1gb"
+                onChange={() => setFormState("1gb")}
               />
               <p>
                 <span>1 GB</span> of storage
