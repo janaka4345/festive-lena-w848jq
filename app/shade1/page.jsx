@@ -33,7 +33,7 @@ export default function CardWithForm() {
           </CardTitle>
           <div className="flex items-center space-x-2 ">
             <Label htmlFor="airplane-mode">Airplane Mode</Label>
-            <Switch id="airplane-mode" className="" />
+            <Switch id="airplane-mode" className="scale-50 " />
             <Label htmlFor="airplane-mode">Airplane Mode</Label>
           </div>
         </div>
