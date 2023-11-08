@@ -31,10 +31,10 @@ export default function CardWithForm() {
           <CardTitle className="w-1/2 ">
             Choose amount thats right for you
           </CardTitle>
-          <div className="flex items-center space-x-2 ">
-            <Label htmlFor="airplane-mode">Airplane Mode</Label>
-            <Switch id="airplane-mode" className="scale-50 " />
-            <Label htmlFor="airplane-mode">Airplane Mode</Label>
+          <div className="flex items-center ml-auto ">
+            <Label htmlFor="bill-mode">Bill-Monthly</Label>
+            <Switch id="bill-mode" className="scale-50 " />
+            <Label htmlFor="bill-mode">Bill-Anualy</Label>
           </div>
         </div>
         {/* <CardDescription>Deploy your new project in one-click.</CardDescription> */}
@@ -77,9 +77,10 @@ export default function CardWithForm() {
           </div>
           <div className="w-full">
             <label htmlFor="200gb">
-              <div className="bg-white border-2 w-full h-fit rounded-sm ">
-                <h1 className="">
-                  Essential {"200gb" === formState && <span>x</span>}
+              <div className="bg-white border-2 w-full h-1/3 rounded-sm ">
+                <h1 className="flex">
+                  Essential{" "}
+                  {"200gb" === formState && <span className="ml-auto">x</span>}
                 </h1>
                 <input
                   className="bg-red-500 hidden"
@@ -95,9 +96,10 @@ export default function CardWithForm() {
               </div>
             </label>
             <label htmlFor="1gb">
-              <div className="bg-white border-2 w-full h-fit rounded-sm ">
-                <h1 className="">
-                  Pro {"1gb" === formState && <span>x</span>}
+              <div className="bg-white border-2 w-full h-1/3 rounded-sm ">
+                <h1 className="flex">
+                  Pro{" "}
+                  {"1gb" === formState && <span className="ml-auto">x</span>}
                 </h1>
                 <input
                   className="bg-red-500 hidden "
@@ -109,6 +111,25 @@ export default function CardWithForm() {
                 />
                 <p>
                   <span>1 GB</span> of storage
+                </p>
+              </div>
+            </label>
+            <label htmlFor="2gb">
+              <div className="bg-white border-2 w-full h-1/3 rounded-sm ">
+                <h1 className="flex">
+                  Premium{" "}
+                  {"2gb" === formState && <span className="ml-auto">x</span>}
+                </h1>
+                <input
+                  className="bg-red-500 hidden "
+                  type="radio"
+                  name="200gb"
+                  id="2gb"
+                  value="2gb"
+                  onChange={() => setFormState("2gb")}
+                />
+                <p>
+                  <span>2 GB</span> of storage
                 </p>
               </div>
             </label>
